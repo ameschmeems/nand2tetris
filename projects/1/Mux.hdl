@@ -12,4 +12,8 @@ CHIP Mux {
 
     PARTS:
     //// Replace this comment with your code.
+	Not(in=sel, out=x);
+	And(a=a, b=x, out=v);
+	And(a=b, b=sel, out=w);
+	Or(a=v, b=w, out=out);
 }
